@@ -1,0 +1,109 @@
+<!--
+  Generated template for the EpisodeDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+
+  </ion-navbar>
+</ion-header>
+
+
+  <ion-content scrollY="true" *ngIf="episode != null" no-padding force-overscroll="true">
+    <img alt="poster" src="{{episode.Poster}}"/>
+    <div class="overlay">
+
+
+    </div>
+    <div class="media-body">
+      <ion-grid>
+        <ion-row class="media-header">
+          <ion-col col-12 class="media-title">
+            <div class="padding-top">
+              <span class="title">{{episode.Title}}</span>
+
+            </div>
+
+
+            <div *ngIf="type == 'movie'">
+              <span>{{episode.Year}}</span>
+              <span class="maturity-number pegi"><strong>{{episode.Rated}}</strong></span> <span class="pegi">{{Serie.Runtime}}</span><span
+              class="nf-icon-button nf-flat-button nf-flat-button-primary nf-flat-button-movie">{{type === 'movie' ? 'Movie' : 'Series'}}
+              </span>
+            </div>
+
+
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p>{{episode.Plot}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p class="lightGrey">Avec : {{episode.Actors}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p class="lightGrey">Directors : {{episode.Director}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+
+          <ion-col col-7 col-md-3>
+            <button ion-button color="light" outline (click)="addToFav()">
+              <ion-icon name="add"></ion-icon>
+              <span class="iconMarge">Ajouter a ma liste</span></button>
+
+          </ion-col>
+          <ion-col col-5 col-md-3>
+            <button ion-button color="danger" (click)="share()">
+              <ion-icon name="share"></ion-icon><span class="iconMarge">Partager</span></button>
+
+
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-12 col-md-6>
+            <h5 class="text-quiet">Remise(s):</h5>
+            <div>{{episode.Awards === 'N/A' ? 'Aucune' : episode.Awards}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12 col-md-6>
+            <h5 class="text-quiet">Note IMDB:</h5>
+            <div *ngIf="episode.imdbRating < 4">
+              <button ion-button color="danger" round>{{episode.imdbRating}} with : {{episode.imdbVotes}} votes
+              </button>
+            </div>
+            <div *ngIf="episode.imdbRating >= 4 && episode.imdbRating <7 ">
+              <button ion-button color="alert" round>{{episode.imdbRating}} with : {{episode.imdbVotes}} votes</button>
+            </div>
+            <div *ngIf="episode.imdbRating >= 7">
+              <button ion-button color="secondary" round>{{episode.imdbRating}} with : {{episode.imdbVotes}} votes</button>
+            </div>
+
+          </ion-col>
+        </ion-row>
+
+
+        <ion-row>
+          <ion-col col-4 col-md-3>
+            <h5 class="text-quiet">Site web</h5>
+            <p>{{episode.website}}</p>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-grid>
+    </div>
+  </ion-content>
+
+

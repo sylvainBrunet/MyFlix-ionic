@@ -1,0 +1,93 @@
+page-detail {
+  .iconMarge{
+    margin-left: 10px;
+  }
+  .overlay {
+    z-index: 1;
+    height: 20%;
+    width: 100%;
+    position: relative;
+    margin-bottom:105%;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */}
+img{
+  z-index: 0;
+  width: 100%;
+  position: absolute;
+}
+  .black:before {
+    background-color: #99fafafa;
+  }
+    ion-header {
+        .toolbar {
+          position: absolute;
+      
+          .toolbar-background {
+            background: transparent;
+          }
+          .toolbar-title {
+            color: black;
+          }
+        }
+      }
+      .maturity-number {
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        text-transform: uppercase;
+        border: solid 1px rgba(255, 255, 255, 0.4);
+        padding: 0 .4em;
+        color:#44bd32;
+        unicode-bidi: normal;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .lightGrey{
+      margin-top: -2%;
+      color:#949494;
+    }
+    .title{
+      font-size: 1.8em;
+      text-transform: capitalize;
+      margin-top: 3%;
+    }
+    .pegi{
+      margin-left: 5%;
+    }
+    .nf-flat-button {
+      font-size: 1vw;
+      font-weight: 700;
+      padding: .57em 1.1em;
+      color: #fff;
+      font-size: 15px;
+      border: 1px solid rgba(255,255,255,.4);
+      -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.3);
+      -moz-box-shadow: 0 1px 2px rgba(0,0,0,.3);
+      box-shadow: 0 1px 2px rgba(0,0,0,.3);
+      background-image: none;
+      border-radius: 10px;
+      background-color: rgba(0,0,0,.4);
+  }
+  .nf-flat-button-movie {
+    margin-left: 32%;
+
+  }
+  .nf-flat-button-series {
+    margin-left: 25%;
+
+  }
+
+  .nf-flat-button-primary {
+    background-color: #e50914;
+    border-color: #ff0a16;
+}
+  
+  .nf-icon-button {
+      display: inline-block;
+      color: #fff;
+      position: relative;
+  }
+}
+

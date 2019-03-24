@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Series
+    </ion-title>
+    <ion-searchbar #searchbar (ionInput)="getItems($event)" showCancelButton="true" cancelButtonText="Annuler" placeholder="Rechercher une series..." (ionCancel)="searchEnabled=false" *ngIf="searchEnabled"></ion-searchbar>
+    <ion-buttons end  *ngIf="!searchEnabled">
+      <button ion-button icon-only (click)="searchEnabled=true">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 col-md-3 *ngFor="let serie of series">
+        <ion-card (click)="openPreview(serie, serie.Type)">
+          <ion-card-content>
+            <img src="{{serie.Poster}}">
+            <div class="titleMovie">
+              {{serie.Title}}
+            </div>
+          <br />
+
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

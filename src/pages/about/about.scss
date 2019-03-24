@@ -1,0 +1,47 @@
+page-about {
+    .card-background-page {
+
+        ion-card {
+          position: relative;
+          text-align: center;
+        }
+
+        .card-title {
+          position: absolute;
+          top: 36%;
+          font-size: 2.0em;
+          width: 100%;
+          font-weight: bold;
+          color: #fff;
+        }
+      .card-image{
+          width: 100%;
+          height: 100%;
+          padding: 0%;
+          margin: 0%;
+          position: relative;
+      }
+        .card-subtitle {
+          font-size: 1.0em;
+          position: absolute;
+          top: 52%;
+          width: 100%;
+          color: #fff;
+        }
+
+      }
+      .titleMovie{
+        position: absolute;
+        bottom: 6%;
+        padding: 0%;
+        margin: 0%;
+        width: 100%;
+        color:#fff;
+       // background-image: radial-gradient(circle, #051937, #434863, #7e7f92, #bbbac5, #fafafa); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: radial-gradient(circle, rgba(0,0,0,1) 0%,rgba(0,0,0,0.3) 100%);
+      }
+
+      .toolbar-background{
+
+      }
+}
